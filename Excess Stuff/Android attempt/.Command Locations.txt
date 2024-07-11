@@ -1,0 +1,184 @@
+BanishCommand.py:
+
+-Banish
+-Voice State check to delete channel
+//
+
+dbd.py:
+-Killer
+-Roll
+//
+
+FunCommands.py:
+
+-8ball
+-define
+-dict
+-wyr
+-afk
+-gif
+-speak
+//
+
+Gecko.py:
+-bonk_gecko
+-gbonks
+-cum
+//
+help.py:
+
+-help
+-invite
+//
+
+joins.py:
+-voice state checker to trigger the join effect
+-joins to force it
+//
+
+leaderboard.py:
+-lbpurge
+-MOTWLB
+-botlog
+//
+
+logging.py:
+-Join logging
+-Leave logging
+-Ban logging
+-Unban logging
+-Edit loggin
+-Deletion logging
+-Bulk deletion logging
+//
+
+mainlisteners.py:
+Loops:
+-sfx_reloader
+-nick_checker
+-tester
+-ass_saver
+Normal listeners:
+-On_ready
+-Join message to new guild for bot
+-Member join message
+-Member leave message
+-on_message for activity log, community polls reacter, triggered, 420/69's, and ahoy's
+//
+
+moderation.py:
+-abusereport/report
+-reports
+-purge
+-kick
+-ban
+-mute
+-unmute
+-ping
+//
+
+music.py:
+-single_gif preset
+-multi_sound preset
+-from_file preset
+-Auto leave and song purge listener
+
+Commands:
+-join
+-play
+-next
+-queue(Broken?)
+-empty/clear
+-remove
+-stop
+-resume
+-dc
+-spurge
+
+Soundboards:
+Single_gif:
+-dwarf
+-door
+-rdr
+-pizza
+From_file:
+-country_western/13
+-ohlook
+-family
+-neverbefore
+-goofed
+-neya
+-dyht
+-how
+Multi_sound:
+-gecs
+//
+
+Pokemon.py:
+-Pokemon
+-pmove
+//
+
+RandomCommands.py:
+-feeling
+-suggest
+-reviews
+-musician
+-spammer
+-LastResort
+-praise
+-2 emoji responders
+-teamviewerReset
+-pfp(Needs option to check others)
+-lpfp
+-Welcome picture for boiyo's server
+//
+
+randomOnMessages.py:
+-Skyra warnings
+-Yags bot -clear deletion
+-Biggee Cheese praise on message
+//
+
+soundboards.py:
+-single_gif
+-multi_sound
+-multi_gif
+
+Commands:
+-ahoy
+-ht
+-hg
+-fy
+-giggity
+-gae
+-gay
+-brb
+-phil
+-r2
+-mission
+-jeff
+-hehe
+-simp
+-wazzup
+-gdonkey
+-chugjug
+-familyguy
+-bs
+-rave
+-wow
+-didnot
+-uwelcome
+-smonkey
+-plan
+-pgood
+-fbi
+-bonk
+-hbn
+-wystm
+-box
+-goofy
+-shutup
+-meat
+-job
+-tmo
