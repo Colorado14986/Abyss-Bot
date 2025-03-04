@@ -355,7 +355,7 @@ class music(commands.Cog):
             await ctx.send('Music resumed')
         else:
             await ctx.send('Nothing is paused at this time')
-
+            
     @commands.command()
     async def dc(self, ctx):
         channel = ctx.message.author.voice.channel
@@ -513,6 +513,13 @@ class music(commands.Cog):
         name = 'Space'
         await from_file(self, ctx, File, title, name)
         await ctx.send('https://tenor.com/view/space-tim-curry-gif-7935778')
+
+    @commands.command()
+    async def storm(self, ctx):
+        File = 'STORRRMMM.mp4'
+        title = "Storm"
+        name = 'Storm'
+        await from_file(self, ctx, File, title, name)
 
 
     '''

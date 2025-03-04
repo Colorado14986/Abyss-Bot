@@ -40,7 +40,7 @@ class PokeParadise_Server_Stuff(commands.Cog):
             1073376752258257017 : 110444955314454528 #Champion:Sick
         }
 
-    '''@commands.Cog.listener()
+    @commands.Cog.listener()
     async def on_member_join(self, member):
         if member.guild.id == 915014434546659360:
             print(time.time() - member.created_at.timestamp())
@@ -49,7 +49,7 @@ class PokeParadise_Server_Stuff(commands.Cog):
             elif time.time() - member.created_at.timestamp() > 259200 and time.time() - member.created_at.timestamp() < 2592000:
                 await member.kick(reason="Your account is too young, you have been kicked automatically")
             else:
-                pass'''
+                pass
     
     @commands.Cog.listener()
     async def on_reaction_remove(self, reaction, user):
@@ -100,19 +100,19 @@ class PokeParadise_Server_Stuff(commands.Cog):
                     await ctx.send(f'{member} was kicked')
             await ctx.send('Any roleless members were kicked')
     
-    @commands.command()
-    async def clean(self, ctx):
-        def not_pinned(msg):
-            return not msg.pinned
-        try:
-            if ctx.author.guild_permissions.administrator or self.leaders[ctx.channel.id] == ctx.author.id or ctx.author.id == 521207861846474772: #Scout for all
-                await ctx.channel.purge(limit=500, check=not_pinned)
-            else:
-                msg = "This is not your channel, you hold no power here {0.author.mention}".format(ctx.message)
-                await ctx.send(msg)
-        except KeyError:
-            msg = "This is not your channel, you hold no power here {0.author.mention}".format(ctx.message)
-            await ctx.send(msg)
+    # @commands.command()
+    # async def clean(self, ctx):
+    #     def not_pinned(msg):
+    #         return not msg.pinned
+    #     try:
+    #         if ctx.author.guild_permissions.administrator or self.leaders[ctx.channel.id] == ctx.author.id or ctx.author.id == 521207861846474772: #Scout for all
+    #             await ctx.channel.purge(limit=500, check=not_pinned)
+    #         else:
+    #             msg = "This is not your channel, you hold no power here {0.author.mention}".format(ctx.message)
+    #             await ctx.send(msg)
+    #     except KeyError:
+    #         msg = "This is not your channel, you hold no power here {0.author.mention}".format(ctx.message)
+    #         await ctx.send(msg)
 
 
     @commands.command()

@@ -1,6 +1,5 @@
 from urban import UrbanClient
 import os
-import youtube_dl
 import discord
 import datetime
 import asyncio

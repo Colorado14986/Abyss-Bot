@@ -1,4 +1,7 @@
-import youtube_dl
+# import youtube_dl
+import yt_dlp
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
 import discord
 from discord import app_commands
 import datetime
@@ -27,7 +30,7 @@ root.addHandler(handler)
 '''
 discord.utils.setup_logging()
 
-youtube_dl.utils.bug_reports_message = lambda: ''
+yt_dlp.utils.bug_reports_message = lambda: ''
 intents = discord.Intents.all()
 intents.members = True
 client = commands.Bot(command_prefix = ';', intents = intents)
@@ -57,11 +60,6 @@ client.joins = {
         #303216255391891466: 'https://www.youtube.com/watch?v=8-nTWaU1qPc', #Tenshi.Arcana
         303216255391891466: 'https://youtu.be/zawQKNjsg_4', #Tenshi.Ash
     }
-
-client.mobile_users = [
-    345982989957726210,#Levi
-    ]
-
 client.onjoins = True
 
 @client.command()
@@ -100,7 +98,6 @@ async def reload(ctx):
 async def load_extensions():
     for filename in os.listdir("./cogs"):
         if filename.endswith(".py"):
-            # cut off the .py from the file name
             await client.load_extension(f"cogs.{filename[:-3]}")
 
 

@@ -1,5 +1,8 @@
 import os
-import youtube_dl
+# import youtube_dl
+import yt_dlp
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
 import discord
 import datetime
 import asyncio

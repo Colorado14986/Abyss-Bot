@@ -544,5 +544,19 @@ class soundboard_(commands.Cog):
         name = 'tmo'
         await multi_gif(self, ctx, sound, gifs, name)
 
+    # @commands.command(pass_context=True)
+    # async def mino(self, ctx):
+    #     sounds = ['https://youtu.be/9rv6EALsI0s', 'https://youtu.be/7CLro-9Mw6M', 'https://youtu.be/n2Y_JOTryqk', 'https://youtu.be/YSNdU2q6eKg', 'https://youtu.be/AdKmSol6ALQ', 'https://youtu.be/b4S2pdIAVbU', 'https://youtu.be/QOM7ZvqAvGw', 'https://youtu.be/-DVS44hS_q0']
+    #     gif = ''
+    #     name = 'Mino'
+    #     await multi_sound(self, ctx, sounds, gif, name)
+    
+    # @commands.command()
+    # async def minotaur(self, ctx):
+    #     url = 'https://youtu.be/8xM4hP4mjsM'
+    #     gif = ''
+    #     name = 'Minotaur'
+    #     await single_gif(self, ctx, url, gif, name)
+
 async def setup(client):
     await client.add_cog(soundboard_(client))

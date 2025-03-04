@@ -159,5 +159,9 @@ class spareCommands(commands.Cog):
         await server.leave()
         await ctx.send(f"I left: {server.name}")
 
+    @commands.command()
+    async def smokebreak(self, ctx):
+        await ctx.send('https://tenor.com/view/mgrr-metal-gear-rising-metal-gear-rising-revengeance-armstrong-senator-armstrong-gif-24517604')
+
 async def setup(client):
     await client.add_cog(spareCommands(client))
