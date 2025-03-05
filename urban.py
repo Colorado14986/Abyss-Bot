@@ -48,9 +48,9 @@ class UrbanClient:
 def _parse(json: dict, check_result: bool = True) -> UrbanDefinition:
     result = []
     if json is None or any(e in json for e in ('error', 'errors')):
-        raise ValueException('UD: Invalid input for Urban Dictionary API')
+        raise ValueException('UD: Invalid input for Urban Dictionary API') # type: ignore
     if check_result and ('list' not in json or len(json['list']) == 0):
-        return result
+        return result # type: ignore
     for definition in json['list']:
         d = UrbanDefinition(
                 definition['word'], 
@@ -60,7 +60,7 @@ def _parse(json: dict, check_result: bool = True) -> UrbanDefinition:
                 int(definition['thumbs_down'])
             )
         result.append(d)
-    return result
+    return result # type: ignore
 
 
 class AsyncUrbanClient:

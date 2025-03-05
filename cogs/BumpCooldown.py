@@ -11,7 +11,7 @@ class bumpCooldown(commands.Cog):
     @commands.Cog.listener()
     async def on_message(self, message):
         try:
-            if "Please wait" in message.embeds[0].description:
+            if "Please wait" in message.embeds[0].description: # type: ignore
                 for f in message.embeds[0].description.split():
                     try:
                         int(f)

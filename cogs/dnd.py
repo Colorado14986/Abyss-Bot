@@ -85,34 +85,34 @@ class dnd(commands.Cog):
     class CoreBastion(discord.ui.View):
         # Thia
 
-        class ThiaBastion(discord.ui.View):
-            @discord.ui.button(label="Garden")
-            async def first_button_callback(self, interaction, button):
-                embed = discord.Embed(title=f'Garden Information:')
-                embed.add_field(name="General Information:", value="A Bastion can have more than one Garden. Each time you add a Garden to your Bastion, choose its type from the options in the Garden Types table. While in your Bastion, you can instruct the facility’s hireling to change the Garden from one type to another. This work takes 21 days, during which time no other activity can occur in this facility.", inline=False)
-                embed.add_field(name="Harvest: Garden Growth.", value="When you issue the Harvest order to this facility, you commission the facility’s hireling to collect items from the Garden as noted in the Garden Types table. The work takes 5 days and costs no money.", inline=False)
-                embed.add_field(name="Enlarging the Facility", value="You can enlarge your Garden to a Vast facility by spending 2,000 GP. A Vast Garden is equivalent to two Roomy Gardens and can include two of the same type of Garden or two different types. When you issue the Harvest order to a Vast Garden, each component garden produces its own harvest. A Vast Garden gains one additional hireling.", inline=False)
-                embed.add_field(name="Garden Types", value="", inline=False)
-                embed.add_field(name="Decorative", value="Aesthetically pleasing garden full of flowers and topiaries.   Harvest: Ten exquisite floral bouquets (worth 5 GP each), ten vials of Perfume, or ten Candles")
-                embed.add_field(name="Food", value="Garden of delicious mushrooms or vegetables.   Harvest: 100 days worth of Rations")
-                embed.add_field(name="Herb", value="Garden of rare herbs, some of which have medicinal uses.   Harvest: Herbs that are used to create either ten Healer’s Kits or one Potion of Healing")
-                embed.add_field(name="Poison", value="Garden stocked with plants and fungi from which poisons and antitoxin can be extracted.  Harvest: Plants that are used to create either two vials of Antitoxin or one vial of Basic Poison")
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+        # class ThiaBastion(discord.ui.View):
+        #     @discord.ui.button(label="Garden")
+        #     async def first_button_callback(self, interaction, button):
+        #         embed = discord.Embed(title=f'Garden Information:')
+        #         embed.add_field(name="General Information:", value="A Bastion can have more than one Garden. Each time you add a Garden to your Bastion, choose its type from the options in the Garden Types table. While in your Bastion, you can instruct the facility’s hireling to change the Garden from one type to another. This work takes 21 days, during which time no other activity can occur in this facility.", inline=False)
+        #         embed.add_field(name="Harvest: Garden Growth.", value="When you issue the Harvest order to this facility, you commission the facility’s hireling to collect items from the Garden as noted in the Garden Types table. The work takes 5 days and costs no money.", inline=False)
+        #         embed.add_field(name="Enlarging the Facility", value="You can enlarge your Garden to a Vast facility by spending 2,000 GP. A Vast Garden is equivalent to two Roomy Gardens and can include two of the same type of Garden or two different types. When you issue the Harvest order to a Vast Garden, each component garden produces its own harvest. A Vast Garden gains one additional hireling.", inline=False)
+        #         embed.add_field(name="Garden Types", value="", inline=False)
+        #         embed.add_field(name="Decorative", value="Aesthetically pleasing garden full of flowers and topiaries.   Harvest: Ten exquisite floral bouquets (worth 5 GP each), ten vials of Perfume, or ten Candles")
+        #         embed.add_field(name="Food", value="Garden of delicious mushrooms or vegetables.   Harvest: 100 days worth of Rations")
+        #         embed.add_field(name="Herb", value="Garden of rare herbs, some of which have medicinal uses.   Harvest: Herbs that are used to create either ten Healer’s Kits or one Potion of Healing")
+        #         embed.add_field(name="Poison", value="Garden stocked with plants and fungi from which poisons and antitoxin can be extracted.  Harvest: Plants that are used to create either two vials of Antitoxin or one vial of Basic Poison")
+        #         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-            @discord.ui.button(label="Laboratory")
-            async def second_button_callback(self, interaction, button):
-                embed = discord.Embed(title=f'Garden Information:')
-                embed.add_field(name="Craft: Alchemist’s Supplies", value="The facility’s hireling crafts anything that can be made with Alchemist’s Supplies using the rules in the Player’s Handbook and chapter 7 of this book.", inline=False)
-                embed.add_field(name="Craft: Poison", value=" You commission the facility’s hireling to craft a vial containing one application of a poison. The poison must be one of the following: Burnt Othur Fumes, Essence of Ether, or Torpor. This work takes 7 days, and you must pay half the poison’s cost. See “Poison” in chapter 3 for descriptions and costs of poisons.", inline=False)
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+        #     @discord.ui.button(label="Laboratory")
+        #     async def second_button_callback(self, interaction, button):
+        #         embed = discord.Embed(title=f'Garden Information:')
+        #         embed.add_field(name="Craft: Alchemist’s Supplies", value="The facility’s hireling crafts anything that can be made with Alchemist’s Supplies using the rules in the Player’s Handbook and chapter 7 of this book.", inline=False)
+        #         embed.add_field(name="Craft: Poison", value=" You commission the facility’s hireling to craft a vial containing one application of a poison. The poison must be one of the following: Burnt Othur Fumes, Essence of Ether, or Torpor. This work takes 7 days, and you must pay half the poison’s cost. See “Poison” in chapter 3 for descriptions and costs of poisons.", inline=False)
+        #         await interaction.response.send_message(embed=embed, ephemeral=True)
             
-            @discord.ui.button(label="Unknown", disabled=True)
-            async def third_button_callback(self, interaction, button):
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+        #     @discord.ui.button(label="Unknown", disabled=True)
+        #     async def third_button_callback(self, interaction, button):
+        #         await interaction.response.send_message(embed=embed, ephemeral=True)
             
-            @discord.ui.button(label="Unknown", disabled=True)
-            async def fourth_button_callback(self, interaction, button):
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+        #     @discord.ui.button(label="Unknown", disabled=True)
+        #     async def fourth_button_callback(self, interaction, button):
+                # await interaction.response.send_message(embed=embed, ephemeral=True)
 
         # Ausenic
 
@@ -196,34 +196,34 @@ At the start of a Bastion turn, you can switch to one of the other options. Your
                 embed.add_field(name='Research: Trinket Trophy', value="You commission the facility’s hireling to search for a trinket that might be of use to you. The work takes 7 days. When the research concludes, roll any die. If the number rolled is odd, the hireling finds nothing useful. If the number rolled is even, the hireling finds a magic item. Roll on the Implements—Common table in chapter 7 to determine what it is.", inline=False)
                 await interaction.response.send_message(embed=embed, ephemeral=True)
         
-        # Nadine
+        # # Nadine
 
-        class NadineBastion(discord.ui.View):
-            @discord.ui.button(label="Archive")
-            async def first_button_callback(self, interaction, button):
-                embed = discord.Embed(title=f'Archive Information:')
-                embed.add_field(name='Research: Helpful Lore', value="When you issue the Research order to this facility, you commission the facility’s hireling to search the Archive for helpful lore. The work takes 7 days. The hireling gains knowledge as if they had cast the Legend Lore spell, then shares this knowledge with you the next time you speak with them.", inline=False)
-                embed.add_field(name="Reference Book", value="Your Archive contains one copy of a rare and valuable reference book, which gives you a benefit while you and the book are in your Bastion. You can choose one of the following options (your DM might make more options available):", inline=False)
-                embed.add_field(name="The Old Faith and Other Religions", value="You have Advantage on any Intelligence (Religion) check you make when you take the Study action to recall lore about deities, rites and prayers, hierarchies, holy symbols, and the practices of secret cults.", inline=False)
-                embed.add_field(name="Enlarging the Facility", value="You can enlarge your Archive to a Vast facility by spending 2,000 GP. If you do so, you gain two additional reference books chosen from the list above.", inline=False)
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+        # class NadineBastion(discord.ui.View):
+        #     @discord.ui.button(label="Archive")
+        #     async def first_button_callback(self, interaction, button):
+        #         embed = discord.Embed(title=f'Archive Information:')
+        #         embed.add_field(name='Research: Helpful Lore', value="When you issue the Research order to this facility, you commission the facility’s hireling to search the Archive for helpful lore. The work takes 7 days. The hireling gains knowledge as if they had cast the Legend Lore spell, then shares this knowledge with you the next time you speak with them.", inline=False)
+        #         embed.add_field(name="Reference Book", value="Your Archive contains one copy of a rare and valuable reference book, which gives you a benefit while you and the book are in your Bastion. You can choose one of the following options (your DM might make more options available):", inline=False)
+        #         embed.add_field(name="The Old Faith and Other Religions", value="You have Advantage on any Intelligence (Religion) check you make when you take the Study action to recall lore about deities, rites and prayers, hierarchies, holy symbols, and the practices of secret cults.", inline=False)
+        #         embed.add_field(name="Enlarging the Facility", value="You can enlarge your Archive to a Vast facility by spending 2,000 GP. If you do so, you gain two additional reference books chosen from the list above.", inline=False)
+        #         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-            @discord.ui.button(label="Library")
-            async def second_button_callback(self, interaction, button):
-                embed = discord.Embed(title=f'Library Information:')
-                embed.add_field(name="Research: Topical Lore", value="When you issue the Research order to this facility, you commission the facility’s hireling to research a topic. The topic can be a legend, a known event or location, a person of significance, a type of creature, or a famous object. The work takes 7 days. When the research concludes, the hireling obtains up to three accurate pieces of information about the topic that were previously unknown to you and shares this knowledge with you the next time you speak with them. The DM determines what information you learn.")
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+        #     @discord.ui.button(label="Library")
+        #     async def second_button_callback(self, interaction, button):
+        #         embed = discord.Embed(title=f'Library Information:')
+        #         embed.add_field(name="Research: Topical Lore", value="When you issue the Research order to this facility, you commission the facility’s hireling to research a topic. The topic can be a legend, a known event or location, a person of significance, a type of creature, or a famous object. The work takes 7 days. When the research concludes, the hireling obtains up to three accurate pieces of information about the topic that were previously unknown to you and shares this knowledge with you the next time you speak with them. The DM determines what information you learn.")
+        #         await interaction.response.send_message(embed=embed, ephemeral=True)
             
-            @discord.ui.button(label="Sacristy")
-            async def second_button_callback(self, interaction, button):
-                embed = discord.Embed(title=f'Sacristy Information:')
-                embed.add_field(name="Craft: Holy Water", value="You commission the facility’s hireling to craft a flask of Holy Water. The work takes 7 days and costs no money. You can spend GP during the creation process to increase the potency of the Holy Water. For every 100 GP you spend, up to a maximum of 500 GP, the damage dealt by the Holy Water increases by 1d8.", inline=False)
-                embed.add_field(name="Craft: Magic Item (Relic)", value="You commission the facility’s hireling to craft a Common or an Uncommon magic item chosen by you from the Relics tables in chapter 7. The facility has the tool required to craft the item, and the hireling has proficiency with that tool as well as proficiency in the Arcana skill. See the “Crafting Magic Items” section in chapter 7 for the time and money that must be spent to craft the item. If the item allows its user to cast any spells from it, you must craft the item yourself (the facility’s hireling can assist), and you must have all those spells prepared every day you spend crafting the item.", inline=False)
-                embed.add_field(name="Spell Refreshment", value="Having a Sacristy allows you to regain one expended spell slot of level 5 or lower after spending an entire Short Rest in your Bastion. You can’t gain this benefit again until you finish a Long Rest.", inline=False)
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+        #     @discord.ui.button(label="Sacristy")
+        #     async def second_button_callback(self, interaction, button):
+        #         embed = discord.Embed(title=f'Sacristy Information:')
+        #         embed.add_field(name="Craft: Holy Water", value="You commission the facility’s hireling to craft a flask of Holy Water. The work takes 7 days and costs no money. You can spend GP during the creation process to increase the potency of the Holy Water. For every 100 GP you spend, up to a maximum of 500 GP, the damage dealt by the Holy Water increases by 1d8.", inline=False)
+        #         embed.add_field(name="Craft: Magic Item (Relic)", value="You commission the facility’s hireling to craft a Common or an Uncommon magic item chosen by you from the Relics tables in chapter 7. The facility has the tool required to craft the item, and the hireling has proficiency with that tool as well as proficiency in the Arcana skill. See the “Crafting Magic Items” section in chapter 7 for the time and money that must be spent to craft the item. If the item allows its user to cast any spells from it, you must craft the item yourself (the facility’s hireling can assist), and you must have all those spells prepared every day you spend crafting the item.", inline=False)
+        #         embed.add_field(name="Spell Refreshment", value="Having a Sacristy allows you to regain one expended spell slot of level 5 or lower after spending an entire Short Rest in your Bastion. You can’t gain this benefit again until you finish a Long Rest.", inline=False)
+        #         await interaction.response.send_message(embed=embed, ephemeral=True)
             
-            @discord.ui.button(label="Training Area")
-            async def fourth_button_callback(self, interaction, button):
+        #     @discord.ui.button(label="Training Area")
+        #     async def fourth_button_callback(self, interaction, button):
                 embed = discord.Embed(title=f'Training Area Information:')
                 embed.add_field(name="Empower: Training", value="When you issue the Empower order to this facility, the facility’s hirelings conduct training exercises for the next 7 days. Any character who trains here for at least 8 hours on each of those days gains a benefit at the end of the training period. The benefit depends on which trainer is present in the facility, as noted in the Expert Trainers table. The benefit lasts for 7 days.", inline=False)
                 embed.add_field(name="Expert Trainers:", value="", inline=False)
@@ -253,24 +253,24 @@ At the start of a Bastion turn, you can switch to one of the other options. Your
                 embed.add_field(name="Research: Topical Lore", value="When you issue the Research order to this facility, you commission the facility’s hireling to research a topic. The topic can be a legend, a known event or location, a person of significance, a type of creature, or a famous object. The work takes 7 days. When the research concludes, the hireling obtains up to three accurate pieces of information about the topic that were previously unknown to you and shares this knowledge with you the next time you speak with them. The DM determines what information you learn.")
                 await interaction.response.send_message(embed=embed, ephemeral=True)
             
-            @discord.ui.button(label="Unknown", disabled=True)
-            async def third_button_callback(self, interaction, button):
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+            # @discord.ui.button(label="Unknown", disabled=True)
+            # async def third_button_callback(self, interaction, button):
+            #     await interaction.response.send_message(embed=embed, ephemeral=True)
             
-            @discord.ui.button(label="Unknown", disabled=True)
-            async def fourth_button_callback(self, interaction, button):
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+            # @discord.ui.button(label="Unknown", disabled=True)
+            # async def fourth_button_callback(self, interaction, button):
+            #     await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
 
 
         ## Main
-        @discord.ui.button(label="Thia", style=discord.ButtonStyle.success)
-        async def first_button_callback(self, interaction, button):
-            embed = discord.Embed(title=f'Bastion Information:')
-            file = discord.File("./Images/ThiaBastion.webp", filename="ThiaBastion.webp")
-            embed.set_image(url="attachment://ThiaBastion.webp")
-            await interaction.response.send_message(embed=embed, file=file, view=self.ThiaBastion(), ephemeral=True)
+        # @discord.ui.button(label="Thia", style=discord.ButtonStyle.success)
+        # async def first_button_callback(self, interaction, button):
+        #     embed = discord.Embed(title=f'Bastion Information:')
+        #     file = discord.File("./Images/ThiaBastion.webp", filename="ThiaBastion.webp")
+        #     embed.set_image(url="attachment://ThiaBastion.webp")
+        #     await interaction.response.send_message(embed=embed, file=file, view=self.ThiaBastion(), ephemeral=True)
 
         @discord.ui.button(label="Ausenic", style=discord.ButtonStyle.primary)
         async def second_button_callback(self, interaction, button):

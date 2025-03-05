@@ -14,7 +14,7 @@ from random import randint
 import json
 import giphypop
 import requests
-from PyDictionary import PyDictionary
+from AyDictionary import AyDictionary
 from bs4 import BeautifulSoup
 import re
 
@@ -63,7 +63,7 @@ class fun_commands(commands.Cog):
     
     @commands.command()
     async def dict(self, ctx, query):
-        dict = PyDictionary()
+        dict = AyDictionary()
         meanings = dict.meaning(query)
         embed = discord.Embed(title=f'Dictionary search for {query}')
         try:
@@ -158,13 +158,13 @@ class fun_commands(commands.Cog):
         word = soup.find('div', attrs = {'class':'slur'})
         race = soup.find('div', attrs = {'class':'race'})
         details = soup.find('div', attrs = {'class':'details'})
-        print((word.text.strip()))
-        print(race.text.strip())
-        print(details.text.strip())
+        print((word.text.strip())) # type: ignore
+        print(race.text.strip()) # type: ignore
+        print(details.text.strip()) # type: ignore
         embed = discord.Embed(title='Racial slur of the day:')
-        embed.add_field(name='Word:', value=word.text.strip())
-        embed.add_field(name='Race:', value=race.text.strip())
-        embed.add_field(name='Details:', value=details.text.strip(), inline=False)
+        embed.add_field(name='Word:', value=word.text.strip()) # type: ignore
+        embed.add_field(name='Race:', value=race.text.strip()) # type: ignore
+        embed.add_field(name='Details:', value=details.text.strip(), inline=False) # type: ignore
         await ctx.send(embed=embed)
 
 

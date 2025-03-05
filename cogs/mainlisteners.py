@@ -22,16 +22,16 @@ class listeners(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.sfx_reloader.start()
+        # self.sfx_reloader.start()
         #self.megacraft_reloader.start()
         #self.ass_saver.start()
         #self.nick_checker.start()
         #self.tester.start()
 
-    @tasks.loop(seconds=5)
-    async def sfx_reloader(self):
-        await self.client.unload_extension(f'cogs.joins')
-        await self.client.load_extension(f'cogs.joins')
+    # @tasks.loop(seconds=5)
+    # async def sfx_reloader(self):
+    #     await self.client.unload_extension(f'cogs.joins')
+    #     await self.client.load_extension(f'cogs.joins')
 
     @tasks.loop(minutes=1)
     async def nick_checker(self):
@@ -137,7 +137,7 @@ class listeners(commands.Cog):
         '''if member.guild.id == 843558625854488588:
             await channel.send(f'Welcome {member.mention} to the Earth SMP, please make sure to checkout the "Getting started" category of channels and find the ip in #ip-and-dynmap')'''
         if not member.guild.id in [778654803617644544, 843558625854488588, 819385452493537280, 559119490571567106, 899889012259573771, 1104879054005477529]:#Remove to turn on for other server, and un-hash the if statement above
-            await channel.send(
+            await channel.send( # type: ignore
             'Well Well Well, look who decided to show up\n{} has joined **{}**'.format(member.mention, member.guild))
 
     @commands.Cog.listener()

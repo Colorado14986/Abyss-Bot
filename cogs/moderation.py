@@ -107,26 +107,26 @@ class mod_commands(commands.Cog):
             msg = "You're an average joe {0.author.mention}, you can't use that".format(ctx.message)
             await ctx.send(msg)
 
-    @commands.command()
-    async def mute(self, ctx, member: discord.Member):
-        if ctx.author.guild_permissions.administrator or ctx.author.id == 230442733234421760:
-            role = discord.utils.get(member.guild.roles, name='Muted')
-            await member.add_roles(role)
-            await ctx.send(
-                '{} has been muted\n**Silence shall now fall**...for a while at least'.format(member.mention))
-        else:
-            msg = "You're an average joe {0.author.mention}, you can't use that".format(ctx.message)
-            await ctx.send(msg)
+    # @commands.command()
+    # async def mute(self, ctx, member: discord.Member):
+    #     if ctx.author.guild_permissions.administrator or ctx.author.id == 230442733234421760:
+    #         role = discord.utils.get(member.guild.roles, name='Muted')
+    #         await member.add_roles(role)
+    #         await ctx.send(
+    #             '{} has been muted\n**Silence shall now fall**...for a while at least'.format(member.mention))
+    #     else:
+    #         msg = "You're an average joe {0.author.mention}, you can't use that".format(ctx.message)
+    #         await ctx.send(msg)
 
-    @commands.command()
-    async def unmute(self, ctx, member: discord.Member):
-        if ctx.author.guild_permissions.administrator or ctx.author.id == 230442733234421760:
-            role = discord.utils.get(member.guild.roles, name='Muted')
-            await member.remove_roles(role)
-            await ctx.send('{} has been unmuted\nYou can do the speak now I guess'.format(member.mention))
-        else:
-            msg = "You're an average joe {0.author.mention}, you can't use that".format(ctx.message)
-            await ctx.send(msg)
+    # @commands.command()
+    # async def unmute(self, ctx, member: discord.Member):
+    #     if ctx.author.guild_permissions.administrator or ctx.author.id == 230442733234421760:
+    #         role = discord.utils.get(member.guild.roles, name='Muted')
+    #         await member.remove_roles(role)
+    #         await ctx.send('{} has been unmuted\nYou can do the speak now I guess'.format(member.mention))
+    #     else:
+    #         msg = "You're an average joe {0.author.mention}, you can't use that".format(ctx.message)
+    #         await ctx.send(msg)
 
     @commands.command()
     async def warn(self, ctx, member:discord.Member, *reason):
@@ -141,7 +141,7 @@ class mod_commands(commands.Cog):
 
             embed = discord.Embed(description=f'Member Warned', colour=0xFFA500)
             embed.set_author(name=f"{member}",
-                            icon_url=f"{member.avatar_url}")
+                            icon_url=f"{member.default_avatar.url}")
             embed.add_field(name='Moderator', value=ctx.author)
             embed.add_field(name='Reason:', value=reason_string, inline=False)
             embed.set_footer(text=f"Time: {t}")

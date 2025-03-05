@@ -1,3 +1,4 @@
+import logging
 import discord
 import discord.voice_client
 from discord.ext import commands
@@ -131,7 +132,7 @@ class logging_listeners(commands.Cog):
 
     @commands.Cog.listener()
     async def on_bulk_message_delete(self, messages):
-        logging:None
+        logging = False
         if messages[0].channel.name not in ['logging', 'giraffes-development-lab', 'logs']:
             logging = discord.utils.get(messages[0].guild.channels, name="logging")
         if not logging:
