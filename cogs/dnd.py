@@ -113,6 +113,44 @@ class dnd(commands.Cog):
             @discord.ui.button(label="Unknown", disabled=True)
             async def fourth_button_callback(self, interaction, button):
                 await interaction.response.send_message(embed=embed, ephemeral=True)
+            
+
+        # Ashrahn
+        class AshrahnBastion(discord.ui.View):
+            @discord.ui.button(label="Sanctuary")
+            async def first_button_callback(self, interaction, button):                
+                embed = discord.Embed(title=f'Sanctuary Information:')
+                embed.add_field(name="Sanctum Charm", value="After spending a Long Rest in your Bastion, you gain a magical Charm (see \"Supernatural Gifts\" in chapter 3) that lasts for 7 days or until you use it. The Charm allows you to cast Heal once without expending a spell slot. You can't gain this Charm again while you still have it.")
+                embed.add_field(name="Craft: Sacred Focus", value="When you issue the Craft order to this facility, you commission the facility's hireling to craft a Druidic Focus (wooden staff) or a Holy Symbol. The work takes 7 days and costs no money. The item remains in your Bastion until you claim it.")
+                await interaction.response.send_message(embed=embed, ephemeral=True)
+                
+            @discord.ui.button(label="Library")
+            async def second_button_callback(self, interaction, button):
+                embed = discord.Embed(title=f'Library Information:')
+                embed.add_field(name="Research: Topical Lore", value="When you issue the Research order to this facility, you commission the facility’s hireling to research a topic. The topic can be a legend, a known event or location, a person of significance, a type of creature, or a famous object. The work takes 7 days. When the research concludes, the hireling obtains up to three accurate pieces of information about the topic that were previously unknown to you and shares this knowledge with you the next time you speak with them. The DM determines what information you learn.")
+                await interaction.response.send_message(embed=embed, ephemeral=True)
+            
+            @discord.ui.button(label="Arcane Study")
+            async def third_button_callback(self, interaction, button):
+                embed = discord.Embed(title=f'Arcane Study Information:')
+                embed.add_field(name="Arcane Study Charm", value="After spending a Long Rest in your Bastion, you gain a magical Charm (see “Supernatural Gifts” in chapter 3) that lasts for 7 days or until you use it. The Charm allows you to cast Identify without expending a spell slot or using Material components. You can’t gain this Charm again while you still have it.", inline=False)
+                embed.add_field(name="Craft: Arcane Focus", value="You commission the facility’s hireling to craft an Arcane Focus. The work takes 7 days and costs no money. The Arcane Focus remains in your Bastion until you claim it.", inline=False)
+                embed.add_field(name="Craft: Book", value="You commission the facility’s hireling to craft a blank book. The work takes 7 days and costs you 10 GP. The book remains in your Bastion until you claim it.", inline=False)
+                embed.add_field(name="Craft: Magic Item (Arcana)", value="If you are level 9+, you can commission the facility’s hireling to craft a Common or an Uncommon magic item chosen by you from the Arcana tables in chapter 7. The facility has the tool required to craft the item, and the hireling has proficiency with that tool as well as proficiency in the Arcana skill. See the “Crafting Magic Items” section in chapter 7 for the time and money that must be spent to craft the item. If the item allows its user to cast any spells from it, you must craft the item yourself (the facility’s hireling can assist), and you must have all those spells prepared every day you spend crafting the item.", inline=False)
+                await interaction.response.send_message(embed=embed, ephemeral=True)
+            
+            @discord.ui.button(label="Garden")
+            async def fourth_button_callback(self, interaction, button):
+                embed = discord.Embed(title=f'Garden Information: Currently Food')
+                embed.add_field(name="General Information:", value="A Bastion can have more than one Garden. Each time you add a Garden to your Bastion, choose its type from the options in the Garden Types table. While in your Bastion, you can instruct the facility’s hireling to change the Garden from one type to another. This work takes 21 days, during which time no other activity can occur in this facility.", inline=False)
+                embed.add_field(name="Harvest: Garden Growth.", value="When you issue the Harvest order to this facility, you commission the facility’s hireling to collect items from the Garden as noted in the Garden Types table. The work takes 5 days and costs no money.", inline=False)
+                embed.add_field(name="Enlarging the Facility", value="You can enlarge your Garden to a Vast facility by spending 2,000 GP. A Vast Garden is equivalent to two Roomy Gardens and can include two of the same type of Garden or two different types. When you issue the Harvest order to a Vast Garden, each component garden produces its own harvest. A Vast Garden gains one additional hireling.", inline=False)
+                embed.add_field(name="Garden Types", value="", inline=False)
+                embed.add_field(name="Decorative", value="Aesthetically pleasing garden full of flowers and topiaries.   Harvest: Ten exquisite floral bouquets (worth 5 GP each), ten vials of Perfume, or ten Candles")
+                embed.add_field(name="Food", value="Garden of delicious mushrooms or vegetables.   Harvest: 100 days worth of Rations")
+                embed.add_field(name="Herb", value="Garden of rare herbs, some of which have medicinal uses.   Harvest: Herbs that are used to create either ten Healer’s Kits or one Potion of Healing")
+                embed.add_field(name="Poison", value="Garden stocked with plants and fungi from which poisons and antitoxin can be extracted.  Harvest: Plants that are used to create either two vials of Antitoxin or one vial of Basic Poison")
+                await interaction.response.send_message(embed=embed, ephemeral=True)
 
         # Ausenic
 
@@ -215,7 +253,7 @@ At the start of a Bastion turn, you can switch to one of the other options. Your
                 await interaction.response.send_message(embed=embed, ephemeral=True)
             
             @discord.ui.button(label="Sacristy")
-            async def second_button_callback(self, interaction, button):
+            async def third_button_callback(self, interaction, button):
                 embed = discord.Embed(title=f'Sacristy Information:')
                 embed.add_field(name="Craft: Holy Water", value="You commission the facility’s hireling to craft a flask of Holy Water. The work takes 7 days and costs no money. You can spend GP during the creation process to increase the potency of the Holy Water. For every 100 GP you spend, up to a maximum of 500 GP, the damage dealt by the Holy Water increases by 1d8.", inline=False)
                 embed.add_field(name="Craft: Magic Item (Relic)", value="You commission the facility’s hireling to craft a Common or an Uncommon magic item chosen by you from the Relics tables in chapter 7. The facility has the tool required to craft the item, and the hireling has proficiency with that tool as well as proficiency in the Arcana skill. See the “Crafting Magic Items” section in chapter 7 for the time and money that must be spent to craft the item. If the item allows its user to cast any spells from it, you must craft the item yourself (the facility’s hireling can assist), and you must have all those spells prepared every day you spend crafting the item.", inline=False)
@@ -255,22 +293,24 @@ At the start of a Bastion turn, you can switch to one of the other options. Your
             
             @discord.ui.button(label="Unknown", disabled=True)
             async def third_button_callback(self, interaction, button):
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+                # await interaction.response.send_message(embed=embed, ephemeral=True)
+                pass
             
             @discord.ui.button(label="Unknown", disabled=True)
             async def fourth_button_callback(self, interaction, button):
-                await interaction.response.send_message(embed=embed, ephemeral=True)
+                # await interaction.response.send_message(embed=embed, ephemeral=True)
+                pass
 
 
 
 
         ## Main
-        @discord.ui.button(label="Thia", style=discord.ButtonStyle.success)
+        @discord.ui.button(label="Ashrahn", style=discord.ButtonStyle.success)
         async def first_button_callback(self, interaction, button):
             embed = discord.Embed(title=f'Bastion Information:')
-            file = discord.File("./Images/ThiaBastion.webp", filename="ThiaBastion.webp")
-            embed.set_image(url="attachment://ThiaBastion.webp")
-            await interaction.response.send_message(embed=embed, file=file, view=self.ThiaBastion(), ephemeral=True)
+            file = discord.File("./Images/AshrahnBastion.webp", filename="AshrahnBastion.webp")
+            embed.set_image(url="attachment://AshrahnBastion.webp")
+            await interaction.response.send_message(embed=embed, file=file, view=self.AshrahnBastion(), ephemeral=True)
 
         @discord.ui.button(label="Ausenic", style=discord.ButtonStyle.primary)
         async def second_button_callback(self, interaction, button):
