@@ -4,3 +4,4 @@
 /Audio/TTS/*.mp3
 /Images/Cute rat pictures
 .env
+__pycache__/
